@@ -6,7 +6,7 @@ boolean waterLow = false;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(BUZZER_PIN, OUTPUT); // Set buzzer - pin 9 as an output
+  pinMode(BUZZER_PIN, OUTPUT); // Set buzzer - pin 5 as an output
 }
 
 void loop() {
@@ -23,8 +23,8 @@ void loop() {
 
   if (waterLow) {
     tone(BUZZER_PIN, 1000); // Send 1KHz sound signal...
-    delay(1000);        // ...for 1 sec
-    noTone(BUZZER_PIN);     // Stop sound...
+    delay(1000);       
+    noTone(BUZZER_PIN);     
   }
-  delay(1000);        // ...for 1sec* 
+  delay(1000);        
 }
